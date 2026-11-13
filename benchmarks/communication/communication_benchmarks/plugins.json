@@ -1,0 +1,8 @@
+{
+  "Library": "communication_benchmarks",
+  "PluginTypes": [{"Type": "file", "Path": "plugin_types/transport.capnp"}],
+  "Plugins": [
+    {"Type": "file", "Path": "plugins/endpoint_cpp.hpp", "Name": "EndpointCpp"},
+    {"Type": "file", "Path": "plugins/endpoint_python.py", "Name": "EndpointPython"}
+  ]
+}

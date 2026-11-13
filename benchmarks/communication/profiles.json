@@ -1,0 +1,5 @@
+{
+  "small_fast": {"payload_bytes": 64, "rate_hz": 10000},
+  "medium": {"payload_bytes": 1048576, "rate_hz": 100},
+  "large_slow": {"payload_bytes": 10485760, "rate_hz": 30}
+}

@@ -1,0 +1,14 @@
+{
+  "Library": "example_library",
+  "PluginTypes": [
+    {"Type": "file", "Path": "plugin_types/scalar_processor.capnp"}
+  ],
+  "Plugins": [
+    {
+      "Type": "file",
+      "Path": "plugins/affine_processor.py",
+      "Name": "AffineProcessor",
+      "PluginType": "example_library::ScalarProcessor"
+    }
+  ]
+}
