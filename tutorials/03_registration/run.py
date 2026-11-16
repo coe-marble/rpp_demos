@@ -10,7 +10,7 @@ from tutorial_support import LIBRARY, PLUGIN, PLUGIN_TYPE, Tutorial, expected_er
 def main():
     with Tutorial() as tutorial:
         with expected_error(ValueError, "not"):
-            tutorial.manager.get_plugin_info_from_lib(PLUGIN)
+            tutorial.manager.get_plugin_info_from_lib(f"{LIBRARY}::MissingPlugin")
         tutorial.register()
         info = tutorial.manager.get_plugin_info_from_lib(PLUGIN)
         print(f"Registered: {info['PluginName']} -> {info['PluginType']}")
@@ -21,9 +21,13 @@ def main():
             output.write("\n# Tutorial registration refresh example.\n")
         tutorial.manager.refresh_plugin_library(LIBRARY)
         print(f"Refreshed: {PLUGIN}")
-        source.unlink()  # Only the temporary copy is modified.
-        with expected_error(FileNotFoundError, "affine_processor.py"):
-            tutorial.manager.register_plugin_from_source(source, LIBRARY)
+        saved_source = source.read_text(encoding="utf-8")
+        source.unlink()  # Only the copy under RPP_HOME is modified.
+        try:
+            with expected_error(FileNotFoundError, "affine_processor.py"):
+                tutorial.manager.register_plugin_from_source(source, LIBRARY)
+        finally:
+            source.write_text(saved_source, encoding="utf-8")
 
 
 if __name__ == "__main__":
