@@ -1,14 +1,15 @@
 # rpp_demos
 
-Runnable RPP tutorials, communication benchmarks, and integrated demo sources.
+RPP source walkthroughs, CLI tutorials, API examples, and communication benchmarks.
 
 The development image is the recommended environment for tutorials.
 
 Documentation is maintained in `rpp_docs`:
 
-- [Tutorials](../../rpp_docs/docs/tutorials/README.md).
-- [Recommended development image](../../rpp_docs/docs/development-image.md).
-- [Benchmarks](../../rpp_docs/docs/benchmarks/README.md).
-- [Integrated demo plan](../../rpp_docs/docs/demos.md).
+- [Tutorials](https://github.com/coe-marble/rpp_docs/blob/develop/docs/tutorials/README.md).
+- [Script slots, loading, and execution](https://github.com/coe-marble/rpp_docs/blob/develop/docs/tutorials/06_scripts.md).
+- [Recommended development image](https://github.com/coe-marble/rpp_docs/blob/develop/docs/development-image.md).
+- [Benchmarks](https://github.com/coe-marble/rpp_docs/blob/develop/docs/benchmarks/README.md).
+- [Integrated demo plan](https://github.com/coe-marble/rpp_docs/blob/develop/docs/demos.md).
 
 [Read the guide on GitHub](https://github.com/coe-marble/rpp_docs/blob/develop/docs/tutorials/README.md).

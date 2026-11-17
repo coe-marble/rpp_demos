@@ -1,7 +1,8 @@
 {
   "Library": "example_library",
   "PluginTypes": [
-    {"Type": "file", "Path": "plugin_types/scalar_processor.capnp"}
+    {"Type": "file", "Path": "plugin_types/scalar_processor.capnp"},
+    {"Type": "file", "Path": "plugin_types/scalar_accumulator.capnp"}
   ],
   "Plugins": [
     {
@@ -9,6 +10,12 @@
       "Path": "plugins/affine_processor.py",
       "Name": "AffineProcessor",
       "PluginType": "example_library::ScalarProcessor"
+    },
+    {
+      "Type": "file",
+      "Path": "plugins/accumulating_processor.py",
+      "Name": "AccumulatingProcessor",
+      "PluginType": "example_library::ScalarAccumulator"
     }
   ]
 }
