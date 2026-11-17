@@ -37,7 +37,7 @@ def main():
             stack.callback(lambda runtime=runtime: runtime.close().require_success("close component"))
             result = runtime.configure()
             if name == "invalid":
-                print(f"Invalid saved gain: success={result.success}; {result.message}")
+                print(f"Expected failure (invalid saved gain): success={result.success}; {result.message}")
                 continue
             result.require_success(f"configure {name}")
             context = runtime.get_context()
@@ -52,7 +52,7 @@ def main():
         overridden = builder.build_component(ComponentRequest(records["processor"].folder))
         stack.callback(lambda: overridden.close().require_success("close overridden component"))
         result = overridden.configure()
-        print(f"Invalid gain override: success={result.success}; {result.message}")
+        print(f"Expected failure (invalid gain override): success={result.success}; {result.message}")
 
 
 if __name__ == "__main__":

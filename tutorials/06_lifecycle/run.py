@@ -18,7 +18,7 @@ def main():
 
     manager = LibraryManager(rpp_home=home)
     manager.get_plugin_info_from_lib("example_library::AccumulatingProcessor")
-    workspace = Workspace(home / "tutorials/05_lifecycle/workspace", manager)
+    workspace = Workspace(home / "tutorials/06_lifecycle/workspace", manager)
     workspace.ensure_layout()
     records = []
     for name in ("source", "target"):

@@ -47,11 +47,11 @@ def main():
     try:
         workspace.get_component("missing")
     except ValueError as error:
-        print(f"Unknown component: {error}")
+        print(f"Expected failure (unknown component): {error}")
     try:
         builder.build_component(ComponentRequest(workspace.root / "missing"))
     except FileNotFoundError as error:
-        print(f"Missing component folder: {error}")
+        print(f"Expected failure (missing component folder): {error}")
 
 
 if __name__ == "__main__":
